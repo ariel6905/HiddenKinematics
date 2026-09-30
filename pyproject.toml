@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "hidden-kinematics"
+version = "1.0.0"
+description = "Learning to Explore Hidden Kinematics for Articulated Object Manipulation"
+readme = "README.md"
+license = { file = "LICENSE" }
+requires-python = ">=3.8,<3.9"
+authors = [
+  { name = "Ruiyao Liu" }, { name = "Boshu Lei" }, { name = "Zhuoyang Pan" }, { name = "Kostas Daniilidis" },
+]
+# torch, isaacgym, pytorch3d and pointnet2_ops are installed separately (see README)
+dependencies = ["numpy==1.23.5", "scipy==1.10.1", "pyyaml", "spconv-cu117==2.3.6", "tensorboard"]
+
+[project.urls]
+Homepage = "https://hiddenkinematics.github.io/"
+
+[tool.setuptools.packages.find]
+include = ["src*"]
